@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ajax</title>
+    <script type="text/javascript" src="/js/jQuery.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            // Пример асинхронной загрузки JavaScript сценария
+            $("button").click(() => {
+                $.ajax({
+                    type: "GET",
+                    url: "test2.html",
+                    success: (data) => {
+                        $("p:first").append(data);
+                    }
+                });
+            });
+            
+        }
+    </script>
+</head>
+<body>
+    <button>Request</button>
+    <p></p>
+</body>
+</html>

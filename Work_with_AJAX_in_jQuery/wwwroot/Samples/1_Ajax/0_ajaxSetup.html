@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ajax</title>
+    <script type="text/javascript" src="/js/jQuery.js"></script>
+    <script type="text/javascript">
+        // обработчик события загрузки страницы.
+        window.onload = function () {
+            // Создание объекта запроса.
+
+            //  $.ajaxSetup() - установка глобальных настроек для запросов AJAX.
+            $.ajaxSetup({
+                url: "test.html",
+                type: "GET"
+            });
+
+            // $.ajax() возвращает объект XMLHttpRequest.
+            // В качестве аргумента функции $.ajax() передается объект, состоящий из пар ключ/значение, которые используются для инициализации и управления
+            // запросом.
+
+            $.ajax({
+                success: function (msg) {
+                    $('p').text(msg);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Data</title>
+    <script type="text/javascript" src="/js/jQuery.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            
+            $("#loader").hide();
+
+            $("button").click(() => {
+                $("loader").show();
+                var dataToSend = "";
+
+                dataToSend += "login=" + $("#login").val();
+                dataToSend += "&pass=" + $("#password").val();
+
+                $ajax({
+                    type: "POST",
+                    url:"",
+
+                    data: dataToSend,
+                    success: (data) => {
+                        $("#output").text(data);
+                        $("loader").hide();
+                    }
+                });
+            });
+            
+        }
+        
+    </script>
+</head>
+<body>
+    Login<input id="login" type="text" />
+    Password<input id="password" type="text" />
+    <br />
+    <button>SignIn</button><span id="loader">Downloading...</span>
+    <p id="output"></p>
+</body>
+</html>

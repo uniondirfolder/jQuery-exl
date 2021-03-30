@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>XMLHttpRequest sync request</title>
+    <script>
+        window.onload = function () {
+            document.getElementById("btnGet").onclick = function () {
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "testfile.html", true);//async true
+
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState == 4) {
+                        if (xhr.status == 200) {
+                            document.getElementById("output").innerHTML += xhr.responseText;
+                        }
+                    }
+                }
+
+                xhr.send();
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="btnGet" type="button" value="Get Info" />
+    <p id="output"></p>
+</body>
+</html>

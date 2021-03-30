@@ -4,4 +4,24 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\Samples\0_XMLHttpRequest\2_AsyncRequest.html" />
+    <Content Remove="wwwroot\Samples\1_Ajax\0_ajaxSetup.html" />
+    <Content Remove="wwwroot\Samples\1_Ajax\1_ajaxGetData.html" />
+    <Content Remove="wwwroot\Samples\1_Ajax\2_ajax.html" />
+    <Content Remove="wwwroot\Samples\1_Ajax\3_ajax_PasLog.html" />
+    <Content Remove="wwwroot\Samples\1_Ajax\test.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Samples\0_XMLHttpRequest\2_AsyncRequest.html" />
+    <None Include="wwwroot\Samples\0_XMLHttpRequest\1_SyncRequest.html" />
+    <None Include="wwwroot\Samples\0_XMLHttpRequest\testfile.html" />
+    <None Include="wwwroot\Samples\1_Ajax\3_ajax_PasLog.html" />
+    <None Include="wwwroot\Samples\1_Ajax\2_ajax.html" />
+    <None Include="wwwroot\Samples\1_Ajax\1_ajaxGetData.html" />
+    <None Include="wwwroot\Samples\1_Ajax\0_ajaxSetup.html" />
+    <None Include="wwwroot\Samples\1_Ajax\test.html" />
+  </ItemGroup>
+
 </Project>
